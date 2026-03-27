@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神抽卡模拟器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>原神抽卡模拟器</h1>
+            <p>体验原神的抽卡乐趣，感受非酋与欧皇的差距</p>
+        </header>
+        
+        <main>
+            <div class="banner">
+                <h2>角色祈愿</h2>
+                <p>当前UP角色：<span id="up-character">雷电将军</span></p>
+            </div>
+            
+            <div class="gacha-container">
+                <div class="gacha-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">当前保底：</span>
+                        <span class="stat-value" id="pity-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">已抽次数：</span>
+                        <span class="stat-value" id="total-pulls">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">5星数量：</span>
+                        <span class="stat-value" id="five-star-count">0</span>
+                    </div>
+                </div>
+                
+                <div class="gacha-buttons">
+                    <button class="gacha-btn single" onclick="gacha(1)">单抽</button>
+                    <button class="gacha-btn ten" onclick="gacha(10)">十连</button>
+                    <button class="gacha-btn reset" onclick="resetGacha()">重置</button>
+                </div>
+                
+                <div class="result-container" id="result-container">
+                    <!-- 抽卡结果将显示在这里 -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2026 原神抽卡模拟器 - 仅供娱乐</p>
+        </footer>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
